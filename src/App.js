@@ -3,11 +3,16 @@ import Button from "./Components/Button";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Button></Button>
-        <Button buttonText={"Hej!"}></Button>
+    <div className="app">
+      <header className="app-header">
+        <Button buttonText={"Header!"}></Button>
       </header>
+      <body className="app-body">
+        <Button buttonText={"Body!"}></Button>
+      </body>
+      <footer className="app-footer">
+        <Button buttonText={"Footer!"}></Button>
+      </footer>
     </div>
   );
 }
