@@ -1,5 +1,6 @@
 import "./App.css";
-import Button from "./Components/Button";
+import Button from "./components/Button";
+import HomePage from "./pages/Home";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Button buttonText={"Footer!"}></Button>
       </footer>
       <p>test</p>
+      <HomePage></HomePage>
     </div>
   );
 }
