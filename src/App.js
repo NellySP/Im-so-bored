@@ -13,6 +13,7 @@ function App() {
       <footer className="app-footer">
         <Button buttonText={"Footer!"}></Button>
       </footer>
+      <p>test</p>
     </div>
   );
 }
