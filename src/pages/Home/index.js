@@ -1,15 +1,22 @@
 import React, { useState, useEffect } from "react";
 
 const HomePage = () => {
-  const [data, setFetch] = useState[null];
-
+  const [activity, setActivity] = useState();
   useEffect(() => {
-    fetch("https://www.boredapi.com/api/activity")
-      .then((response) => response.json())
-      .then((data) => setFetch(data));
+    getActivity();
   }, []);
 
-  return <h1>{data.activity}</h1>;
+  const getActivity = async () => {
+    const response = await fetch("http://www.boredapi.com/api/activity");
+    const data = await response.json();
+    setActivity(data.activity);
+  };
+
+  return (
+    <div>
+      <h1>{activity}</h1>
+    </div>
+  );
 };
 
 export default HomePage;
