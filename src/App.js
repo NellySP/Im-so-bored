@@ -1,11 +1,16 @@
 import "./App.css";
-import Button from "./components/Button";
+// import Button from "./components/Button";
 import HomePage from "./pages/Home";
 
 function App() {
   return (
     <div className="app">
-      <header className="app-header">
+      <HomePage />
+    </div>
+  );
+}
+{
+  /* <header className="app-header">
         <Button buttonText={"Header!"}></Button>
       </header>
       <body className="app-body">
@@ -15,9 +20,7 @@ function App() {
         <Button buttonText={"Footer!"}></Button>
       </footer>
       <p>test</p>
-      <HomePage></HomePage>
-    </div>
-  );
+      <HomePage></HomePage> */
 }
 
 export default App;
