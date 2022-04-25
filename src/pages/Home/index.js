@@ -12,7 +12,7 @@ const HomePage = () => {
     <div className="App">
       <p id="activity"></p>
     </div>
-  )
+  );
   };
 
 export default HomePage;
