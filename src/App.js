@@ -6,7 +6,6 @@ function App() {
   return (
     <div className="app">
       <RandomActivity />
-      <Button buttonText="Testa en annan!"></Button>
     </div>
   );
 }

@@ -1,3 +1,4 @@
+import Button from "../Button";
 import React, { useState, useEffect } from "react";
 
 const RandomActivity = () => {
@@ -16,6 +17,7 @@ const RandomActivity = () => {
   return (
     <div>
       <h1>{activity}</h1>
+      <Button />
     </div>
   );
 };
