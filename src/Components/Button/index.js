@@ -18,4 +18,8 @@ Button.defaultProps = {
   buttonText: "I'm so bored!",
 };
 
+Button.propTypes = {
+  handleClick: PropTypes.func,
+};
+
 export default Button;
