@@ -12,6 +12,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   buttonText: "I'm so bored!",
+  buttonText2: "I'm so GLAD!",
 };
 
 export default Button;
