@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const HomePage = () => {
+const RandomActivity = () => {
   const [activity, setActivity] = useState();
   useEffect(() => {
     getActivity();
@@ -19,4 +19,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default RandomActivity;
