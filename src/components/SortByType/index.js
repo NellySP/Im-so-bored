@@ -26,6 +26,7 @@ const SortByType = () => {
     <div>
       <h3>{activity}</h3>
       <p>{type}</p>
+
       <form onSubmit={() => getType()}>
         <div>
           <label htmlFor="type">Type of activity</label>

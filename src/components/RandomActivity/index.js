@@ -7,7 +7,6 @@ const RandomActivity = () => {
   const getActivity = async () => {
     const response = await fetch("https://www.boredapi.com/api/activity");
     const data = await response.json();
-    console.log(data);
     setActivity(data.activity);
   };
 
