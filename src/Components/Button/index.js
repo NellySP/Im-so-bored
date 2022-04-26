@@ -10,15 +10,12 @@ const Button = ({ buttonText, handleClick }) => {
   );
 };
 
-Button.propTypes = {
-  buttonText: PropTypes.string,
-};
-
 Button.defaultProps = {
   buttonText: "I'm so bored!",
 };
 
 Button.propTypes = {
+  buttonText: PropTypes.string,
   handleClick: PropTypes.func,
 };
 
