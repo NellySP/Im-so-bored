@@ -4,13 +4,15 @@ import React, { useState, useEffect } from "react";
 const PeopleActivity = () => {
   const [activity, setActivity] = useState();
   const [participants, setParticipants] = useState();
+  const [inputParticipants, setinputParticipants] = useState();
 
   const getActivity = async () => {
     const response = await fetch(
-      "https://www.boredapi.com/api/activity?participants=:" + participants
+      "https://www.boredapi.com/api/activity?participants=" + inputParticipants
     );
     const data = await response.json();
     setActivity(data.activity);
+    setParticipants(data.participants);
   };
 
   useEffect(() => {
@@ -20,10 +22,11 @@ const PeopleActivity = () => {
   return (
     <div>
       <h2>{activity}</h2>
+      <h2>{participants}</h2>
       <div className="participants-form">
         <label htmlFor="participants">Number of participants</label>
         <input
-          onChange={(event) => setParticipants(event.target.value)}
+          onChange={(event) => setinputParticipants(event.target.value)}
           type="number"
           name="participants"
           id="participants"
@@ -32,7 +35,11 @@ const PeopleActivity = () => {
           defaultValue={1}
         />
 
-        <Button type="submit" handleClick={() => getActivity()} />
+        <Button
+          buttonText="Give me someting new!"
+          type="submit"
+          handleClick={() => getActivity()}
+        />
       </div>
     </div>
   );
