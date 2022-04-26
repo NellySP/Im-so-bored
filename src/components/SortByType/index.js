@@ -1,20 +1,21 @@
 import React, { useState, useEffect } from "react";
-
+import Button from "../Button";
 const SortByType = () => {
+  const [activity, setActivity] = useState();
   const [type, setType] = useState();
+  const [inputType, setInputType] = useState();
 
   const getType = async () => {
     const response = await fetch(
-      "http://www.boredapi.com/api/activity?type={type}"
+      "http://www.boredapi.com/api/activity?type=" + inputType
     );
     const data = await response.json();
-    console.log(data);
+    setActivity(data.activity);
     setType(data.type);
   };
-  console.log(type);
 
   function changeType(e) {
-    setType(e.target.value);
+    setInputType(e.target.value);
   }
 
   useEffect(() => {
@@ -23,10 +24,15 @@ const SortByType = () => {
 
   return (
     <div>
-      <form>
+      <form onSubmit={() => getType()}>
         <div>
           <label htmlFor="type">Type of activity</label>
-          <select name="type" id="type" value={type} onChange={changeType}>
+          <select
+            name="type"
+            id="type"
+            defaultValue={"social"}
+            onChange={changeType}
+          >
             <option value="">Random</option>
             <option value="education">Education</option>
             <option value="recreational">Recreational</option>
@@ -40,7 +46,9 @@ const SortByType = () => {
           </select>
         </div>
       </form>
-      <h1>{type}</h1>
+      <Button buttonText={type} type="submit" handleClick={() => getType()} />
+      <h3>{activity}</h3>
+      <p>{type}</p>
     </div>
   );
 };
