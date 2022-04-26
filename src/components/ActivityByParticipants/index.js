@@ -22,7 +22,7 @@ const PeopleActivity = () => {
   return (
     <div>
       <h2>{activity}</h2>
-      <h2>{participants}</h2>
+      <p>Number of participants: {participants}</p>
       <div className="participants-form">
         <label htmlFor="participants">Number of participants</label>
         <input
