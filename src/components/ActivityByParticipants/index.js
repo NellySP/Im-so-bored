@@ -7,10 +7,9 @@ const PeopleActivity = () => {
 
   const getActivity = async () => {
     const response = await fetch(
-      "http://www.boredapi.com/api/activity?participants=:participants"
+      "https://www.boredapi.com/api/activity?participants=:" + participants
     );
     const data = await response.json();
-    console.log(data);
     setActivity(data.activity);
   };
 
@@ -20,7 +19,7 @@ const PeopleActivity = () => {
 
   return (
     <div>
-      <h1>{activity}</h1>
+      <h2>{activity}</h2>
       <div className="participants-form">
         <label htmlFor="participants">Number of participants</label>
         <input
@@ -32,8 +31,9 @@ const PeopleActivity = () => {
           max="5"
           defaultValue={1}
         />
+
+        <Button type="submit" handleClick={() => getActivity()} />
       </div>
-      <Button handleClick={() => getActivity()} />
     </div>
   );
 };
