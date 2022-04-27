@@ -1,5 +1,5 @@
-import Button from "../Button";
 import React, { useEffect } from "react";
+import Button from "../Button";
 
 const RandomActivity = ({ activity, setActivity }) => {
   const getActivity = async () => {

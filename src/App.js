@@ -5,12 +5,18 @@ import SpecifyActivity from "./components/SpecifyActivity";
 import { useState } from "react";
 
 function App() {
+  React.useEffect(() => {
+    document.title = "Got nothing to do??";
+  }, []);
+
+  let date = new Date().getFullYear();
   const [activity, setActivity] = useState();
   const [type, setType] = useState();
   const [participants, setParticipants] = useState();
+
   return (
     <div className="app">
-      <p>Got nothing to do??</p>
+      <p>{document.title}</p>
       <div className="activity-wrapper">
         <h2>{activity}</h2>
         <p>Number of participants: {participants}</p>
@@ -25,7 +31,7 @@ function App() {
         participants={participants}
         setParticipants={setParticipants}
       />
-      <p>Footer</p>
+      <p>© {date}</p>
     </div>
   );
 }

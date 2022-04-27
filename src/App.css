@@ -11,13 +11,22 @@
   justify-content: space-around;
   text-align: center;
   height: 100vh;
+  background-color: #dac2a1;
 }
 
 .activity-wrapper {
-  background-color: aquamarine;
+  background-color: #fefae0;
   width: 80%;
   height: 30%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+
+.colors {
+  background-color: #ccd5ae;
+  background-color: #e9edc9;
+  background-color: #fefae0;
+  background-color: #faedcd;
+  background-color: #a68a64;
 }
