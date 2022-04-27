@@ -10,8 +10,9 @@ function App() {
   const [participants, setParticipants] = useState();
   return (
     <div className="app">
+      <p>Got nothing to do??</p>
       <div className="activity-wrapper">
-        <h1>{activity}</h1>
+        <h2>{activity}</h2>
         <p>Number of participants: {participants}</p>
         <p>category: {type}</p>
       </div>

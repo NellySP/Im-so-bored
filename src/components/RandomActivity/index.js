@@ -6,7 +6,6 @@ const RandomActivity = ({ activity, setActivity }) => {
     const response = await fetch("https://www.boredapi.com/api/activity");
     const data = await response.json();
     setActivity(data.activity);
-    console.log(activity);
   };
 
   useEffect(() => {
