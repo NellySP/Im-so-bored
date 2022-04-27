@@ -9,7 +9,7 @@ Below you'll find a list of requirements:
 
 - ---It should be built in ReactJS---
 - Should implement nice graphical user interface.
-- Can't use any third-party frameworks such as jQuery.
+- <s>Can't use any third-party frameworks such as jQuery.<s>
 - Can't contain any errors, warning or notices in the developer console.
 - Should consist of at least three react components.
 - Should include both stateless and stateful components and should use state and props. ??
