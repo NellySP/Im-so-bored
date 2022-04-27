@@ -14,7 +14,7 @@ function App() {
       <div className="activity-wrapper">
         <h2>{activity}</h2>
         <p>Number of participants: {participants}</p>
-        <p>category: {type}</p>
+        <p>Category: {type}</p>
       </div>
       <RandomActivity activity={activity} setActivity={setActivity} />
       <SpecifyActivity
@@ -25,6 +25,7 @@ function App() {
         participants={participants}
         setParticipants={setParticipants}
       />
+      <p>Footer</p>
     </div>
   );
 }

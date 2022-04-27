@@ -1,4 +1,18 @@
 .participants-form {
   display: flex;
   flex-direction: column;
+  padding: 2rem 1rem;
+  text-align: left;
+  gap: 1rem;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  padding: 0.5rem 1rem;
+}
+
+select {
+  padding: 0.5rem;
 }
