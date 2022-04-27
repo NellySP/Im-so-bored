@@ -1,16 +1,12 @@
 import "./App.css";
-import PeopleActivity from "./components/ActivityByParticipants";
 import RandomActivity from "./components/RandomActivity";
-import SortByType from "./components/SortByType";
+import SpecifyActivity from "./components/SpecifyActivity";
 
 function App() {
   return (
     <div className="app">
       <RandomActivity />
-
-      <SortByType />
-
-      <PeopleActivity />
+      <SpecifyActivity />
     </div>
   );
 }
