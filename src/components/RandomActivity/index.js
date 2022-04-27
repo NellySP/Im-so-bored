@@ -1,13 +1,12 @@
 import Button from "../Button";
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 
-const RandomActivity = () => {
-  const [activity, setActivity] = useState();
-
+const RandomActivity = ({ activity, setActivity }) => {
   const getActivity = async () => {
     const response = await fetch("https://www.boredapi.com/api/activity");
     const data = await response.json();
     setActivity(data.activity);
+    console.log(activity);
   };
 
   useEffect(() => {
@@ -16,7 +15,6 @@ const RandomActivity = () => {
 
   return (
     <div>
-      <h1>{activity}</h1>
       <Button handleClick={() => getActivity()} />
     </div>
   );

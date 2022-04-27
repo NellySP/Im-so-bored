@@ -1,8 +1,7 @@
 import Button from "../Button";
 import React, { useState, useEffect } from "react";
 
-const SpecifyActivity = () => {
-  const [activity, setActivity] = useState();
+const SpecifyActivity = ({ activity, setActivity }) => {
   const [participants, setParticipants] = useState();
   const [inputParticipants, setinputParticipants] = useState();
   const [type, setType] = useState();
@@ -16,7 +15,6 @@ const SpecifyActivity = () => {
         inputType
     );
     const data = await response.json();
-    console.log(data);
     setActivity(data.activity);
     setParticipants(data.participants);
     setType(data.type);
@@ -32,7 +30,6 @@ const SpecifyActivity = () => {
 
   return (
     <div>
-      <h2>{activity}</h2>
       <p>Number of participants: {participants}</p>
       <p>type: {type}</p>
       <div className="participants-form">
