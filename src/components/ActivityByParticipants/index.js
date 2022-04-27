@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 const PeopleActivity = () => {
   const [activity, setActivity] = useState();
   const [participants, setParticipants] = useState();
-  const [inputParticipants, setinputParticipants] = useState();
+  const [inputParticipants, setInputParticipants] = useState();
 
   const getActivity = async () => {
     const response = await fetch(
@@ -14,6 +14,10 @@ const PeopleActivity = () => {
     setActivity(data.activity);
     setParticipants(data.participants);
   };
+
+  //   useEffect(() => {
+  //     getActivity();
+  //   });
 
   useEffect(() => {
     getActivity();
@@ -26,7 +30,7 @@ const PeopleActivity = () => {
       <div className="participants-form">
         <label htmlFor="participants">Number of participants</label>
         <input
-          onChange={(event) => setinputParticipants(event.target.value)}
+          onChange={(event) => setInputParticipants(event.target.value)}
           type="number"
           name="participants"
           id="participants"
