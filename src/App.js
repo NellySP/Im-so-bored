@@ -6,14 +6,24 @@ import { useState } from "react";
 
 function App() {
   const [activity, setActivity] = useState();
-
+  const [type, setType] = useState();
+  const [participants, setParticipants] = useState();
   return (
     <div className="app">
-      {/* <div className="activity-wrapper"> */}
-      <h1>{activity}</h1>
-      {/* </div> */}
+      <div className="activity-wrapper">
+        <h1>{activity}</h1>
+        <p>Number of participants: {participants}</p>
+        <p>category: {type}</p>
+      </div>
       <RandomActivity activity={activity} setActivity={setActivity} />
-      <SpecifyActivity activity={activity} setActivity={setActivity} />
+      <SpecifyActivity
+        activity={activity}
+        setActivity={setActivity}
+        type={type}
+        setType={setType}
+        participants={participants}
+        setParticipants={setParticipants}
+      />
     </div>
   );
 }

@@ -1,10 +1,16 @@
 import Button from "../Button";
 import React, { useState, useEffect } from "react";
 
-const SpecifyActivity = ({ activity, setActivity }) => {
-  const [participants, setParticipants] = useState();
+const SpecifyActivity = ({
+  activity,
+  setActivity,
+  type,
+  setType,
+  participants,
+  setParticipants,
+}) => {
+  // const [participants, setParticipants] = useState();
   const [inputParticipants, setinputParticipants] = useState();
-  const [type, setType] = useState();
   const [inputType, setInputType] = useState();
 
   const getActivity = async () => {
@@ -30,8 +36,8 @@ const SpecifyActivity = ({ activity, setActivity }) => {
 
   return (
     <div>
-      <p>Number of participants: {participants}</p>
-      <p>type: {type}</p>
+      {/* <p>Number of participants: {participants}</p>
+      <p>category: {type}</p> */}
       <div className="participants-form">
         <label htmlFor="participants">Number of participants</label>
         <input
@@ -41,15 +47,11 @@ const SpecifyActivity = ({ activity, setActivity }) => {
           id="participants"
           min="1"
           max="5"
-          defaultValue={1}
+          // defaultValue={1}
         />
         <label htmlFor="type">Type of activity</label>
-        <select
-          name="type"
-          id="type"
-          defaultValue={"social"}
-          onChange={changeType}
-        >
+        <select name="type" id="type" onChange={changeType}>
+          <option value=""></option>
           <option value="">Random</option>
           <option value="education">Education</option>
           <option value="recreational">Recreational</option>
