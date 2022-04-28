@@ -1,6 +1,6 @@
 import Button from "../Button";
 import React, { useState, useEffect } from "react";
-import Styles from "./specify.css";
+import "./specify.css";
 
 const SpecifyActivity = ({
   activity,
