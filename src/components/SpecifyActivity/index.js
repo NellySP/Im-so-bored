@@ -27,6 +27,8 @@ const SpecifyActivity = ({
     setType(data.type);
   };
 
+  function showSpecifics(e) {}
+
   function changeType(e) {
     setInputType(e.target.value);
   }

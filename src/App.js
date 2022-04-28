@@ -19,8 +19,10 @@ function App() {
       <p>{document.title}</p>
       <div className="activity-wrapper">
         <h2>{activity}</h2>
-        <p>Number of participants: {participants}</p>
-        <p>Category: {type}</p>
+        <div className="specify-box">
+          <p>Number of participants: {participants}</p>
+          <p>Category: {type}</p>
+        </div>
       </div>
       <RandomActivity activity={activity} setActivity={setActivity} />
       <SpecifyActivity

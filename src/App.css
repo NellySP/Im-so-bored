@@ -26,6 +26,11 @@
   font-size: larger;
 }
 
+.specify-box p {
+  margin-bottom: 4%;
+  /* display: none; */
+}
+
 .colors {
   background-color: #ccd5ae;
   background-color: #e9edc9;
