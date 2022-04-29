@@ -24,7 +24,7 @@ const RandomActivity = ({
 
   return (
     <div>
-      <Button handleClick={() => getActivity()} />
+      <Button buttonText="Choose for me!" handleClick={() => getActivity()} />
     </div>
   );
 };

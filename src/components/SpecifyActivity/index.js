@@ -40,6 +40,7 @@ const SpecifyActivity = ({
 
   return (
     <div>
+      <p>Want someting more specific?</p>
       <div className="participants-form">
         <div className="wrapper">
           <select

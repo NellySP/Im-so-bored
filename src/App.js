@@ -22,7 +22,7 @@ function App() {
       <p>{document.title}</p>
       <div className="activity-wrapper">
         <h1>{activity}</h1>
-        {hide ? <h2>Click button for suggestion!</h2> : null}
+        {hide ? <h2>Click button for randomly generated suggestion!</h2> : null}
         {show ? (
           <div className="specify-box">
             <p>Number of participants: {participants}</p>
