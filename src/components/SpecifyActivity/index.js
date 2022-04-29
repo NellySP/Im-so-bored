@@ -9,8 +9,9 @@ const SpecifyActivity = ({
   setType,
   participants,
   setParticipants,
+  show,
+  setShow,
 }) => {
-  // const [participants, setParticipants] = useState();
   const [inputParticipants, setinputParticipants] = useState();
   const [inputType, setInputType] = useState();
 
@@ -25,9 +26,8 @@ const SpecifyActivity = ({
     setActivity(data.activity);
     setParticipants(data.participants);
     setType(data.type);
+    setShow(true);
   };
-
-  function showSpecifics(e) {}
 
   function changeType(e) {
     setInputType(e.target.value);
