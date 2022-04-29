@@ -34,6 +34,7 @@ const SpecifyActivity = ({
   }
 
   useEffect(() => {
+    function getActivity() {}
     getActivity();
   }, []);
 

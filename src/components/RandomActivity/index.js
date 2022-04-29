@@ -10,6 +10,7 @@ const RandomActivity = ({ activity, setActivity, show, setShow }) => {
   };
 
   useEffect(() => {
+    function getActivity() {}
     getActivity();
   }, []);
 
