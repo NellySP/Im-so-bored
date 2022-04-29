@@ -15,12 +15,14 @@ function App() {
   const [participants, setParticipants] = useState();
 
   const [show, setShow] = useState(false);
+  const [hide, setHide] = useState(true);
 
   return (
     <div className="app">
       <p>{document.title}</p>
       <div className="activity-wrapper">
-        <h2>{activity}</h2>
+        <h1>{activity}</h1>
+        {hide ? <h2>Click button for suggestion!</h2> : null}
         {show ? (
           <div className="specify-box">
             <p>Number of participants: {participants}</p>
@@ -33,6 +35,8 @@ function App() {
         setActivity={setActivity}
         show={show}
         setShow={setShow}
+        hide={hide}
+        setHide={setHide}
       />
       <SpecifyActivity
         activity={activity}
