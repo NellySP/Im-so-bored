@@ -8,10 +8,10 @@ The assignment is to create a small application using React. The assignment shou
 Below you'll find a list of requirements:
 
 - <s>It should be built in ReactJS</s>
-- Should implement nice graphical user interface - in progress
+- <s>Should implement nice graphical user interface </s>
 - <s>Can't use any third-party frameworks such as jQuery.</s>
-- Can't contain any errors, warning or notices in the developer console - in progress
+- <s>Can't contain any errors, warning or notices in the developer console </s>
 - <s>Should consist of at least three react components.</s>
-- Should include both stateless and stateful components and should use state and props - in progress
+- <s>Should include both stateless and stateful components and should use state and props </s>
 - <s>Should include at least one API call. And its data should be presented.</s>
 - Needs to be uploaded and presented on Netlify or Vercel - in progress
