@@ -1,4 +1,4 @@
-import Button from "../Button/index.js";
+import Button from "../Button";
 import React, { useState, useEffect } from "react";
 import "./specify.css";
 

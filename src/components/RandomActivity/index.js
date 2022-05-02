@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Button from "../Button/index.js";
+import Button from "../Button";
 
 const RandomActivity = ({
   activity,
