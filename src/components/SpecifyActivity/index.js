@@ -11,10 +11,11 @@ const SpecifyActivity = ({
   setParticipants,
   show,
   setShow,
+  error,
+  setError,
 }) => {
   const [inputParticipants, setinputParticipants] = useState();
   const [inputType, setInputType] = useState();
-  // const [error, setError] = useState(null);
 
   const getActivity = async () => {
     const response = await fetch(
@@ -23,17 +24,14 @@ const SpecifyActivity = ({
         "&type=" +
         inputType
     );
-    //     .catch((err) =>{
-    //       this.setState({
-    //           error:err.response.data,
-    //           loading:false
-    //       })
-    //  })
     const data = await response.json();
     setActivity(data.activity);
     setParticipants(data.participants);
     setType(data.type);
     setShow(true);
+    if (data.error) {
+      setError("No activity found!");
+    }
   };
 
   function changeType(e) {

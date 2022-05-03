@@ -13,6 +13,7 @@ function App() {
   const [activity, setActivity] = useState();
   const [type, setType] = useState();
   const [participants, setParticipants] = useState();
+  const [error, setError] = useState(null);
 
   const [show, setShow] = useState(false);
   const [hide, setHide] = useState(true);
@@ -25,6 +26,7 @@ function App() {
         {hide ? <h2>Click button for randomly generated suggestion!</h2> : null}
         {show ? (
           <div className="specify-box">
+            <h2>{error}</h2>
             <p>Number of participants: {participants}</p>
             <p>Category: {type}</p>
           </div>
@@ -47,6 +49,8 @@ function App() {
         setParticipants={setParticipants}
         show={show}
         setShow={setShow}
+        error={error}
+        setError={setError}
       />
       <p>© {date}</p>
     </div>
