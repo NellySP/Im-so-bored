@@ -17,5 +17,5 @@ Below you'll find a list of requirements:
 - <s>Needs to be uploaded and presented on Netlify or Vercel. </s>
 
 Made by:
-[Sophie Wulf](https://github.com/sowulff)
-[Nelly Petrén](https://github.com/NellySP)
+- [Sophie Wulf](https://github.com/sowulff)
+- [Nelly Petrén](https://github.com/NellySP)
