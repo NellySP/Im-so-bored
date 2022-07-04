@@ -2,6 +2,8 @@
 
 <img src="https://media.giphy.com/media/dT7LBdAZP1Rh6/giphy.gif" width=50%>
 
+Visit the site here: https://im-so-bored.vercel.app/
+
 # Assignment
 The assignment is to create a small application using React. 
 
